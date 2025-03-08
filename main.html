@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/game-menu.css"/>
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/gamescript.js"></script>
+    <script defer src="./js/enemylist.js"></script>
+    <script defer src="./js/itemlist.js"></script>
+</head>
+    <!-- Modal prompt when you first log-in to give your character a name & selection of your character class -->
+    <!-- Hover-over on your character's stats area that provides tooltip information about them -->
+    <!-- Menu selections that appear as you click on things like shopping, battle, location, etc. -->
+    <!-- Navigation bar on the top of the screen to direct you through different sites (game articles, news, gallery, enemies, )  -->
+    <!-- Accordions built into game gallery -->
+    <!-- Rotation selection for Articles and News cards -->
+    <!-- Toggle selection to change the style format of game's menu -->
+    <!-- Modal prompt at victory/game-over to restart (either cycle back to the first modal or have the selection within this modal) -->
+<body>
+    <header class="header">
+        <label id="hamburger-icon" for="hamburger-btn">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+        <input id="hamburger-btn" type="checkbox" />
+
+        <nav>
+            <!--This will be the navigation that the user can select to navigate to new pages-->
+            <!--Make this into a hamburger at top left of page and expand from the left edge of screen into view when clicked-->
+            <ul class="main-nav">
+                <li id="nav"><a href="game-about.html">About</a></li>
+                <li id="nav"><a href="game-news.html">News</a></li>
+                <li id="nav"><a href="game-gallery.html">Gallery</a></li>
+                <li id="nav"><a href="game-articles.html">Articles</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <h1>THE ADVENTURE GAME</h1>
+        <div class="startmodal"> <!--Some form of eventListener that when the page is in focus, this must be completed and submitted-->
+            <h2>Welcome to THE ADVENTURE GAME</h2>
+            <input type="type">please enter your name</input> <!--Text Input Required-->
+            <p id="gamestart"> Please Select Your Class:</p>
+            <button class="interact warrior">Warrior</button> <!--Click = toggle/checkbox?-->
+            <button class="interact mage">Mage</button> <!--Click = toggle/checkbox?-->
+            <button class="interact" id="start">START NOW</button>
+        </div>
+        <div class="endmodal">Game over Display</div>
+        <div class="game"> <!--This will be the main gamplay area of the page-->      
+            <div class="game-display">
+                <div class="battle"> <!--Battle Screen display-->
+                    <div class="enemy"></div>
+                </div>
+                <div class="merchant">
+                    <button class="interact" id="buy">Buy</button>
+                    <button class="interact" id="sell">Sell</button>
+                    <button class="interact" id="return">Leave</button>
+                    <div id="stock">
+                        <button class="interact zone-one weapon" id="wood-sword">Wooden Sword $50</button>
+                        <button class="interact zone-one armor" id="cloth-armor">Cloth Armor $50</button>
+                        <button class="interact zone-one item" id="potion">Potion $5</button>
+                    </div>
+                </div>
+            </div>
+            <div class="game-menu">
+                <div class="basic-selection">
+                    <button class="interact" id="fight">Encounter</button>
+                    <button class="interact" id="shop">Shop</button>
+                    <button class="interact" id="magicshop">Magic Shop</button>
+                    <button class="interact" id="rest">Rest</button>
+                </div>
+            </div>
+            <div class="character">
+                <div class="characterinfo">
+                    <div id="base-info">
+                        <p>Name</p>
+                        <p>Class</p>
+                        <p>Level</p>
+                        <p>XP</p>
+                    </div>
+                </div>
+                <div class="characterstats">Stats
+                    <ul>
+                        <li>HP</li>
+                        <li>MP</li>
+                    </ul>
+                    <ul>
+                        <li>Strength</li>
+                        <li>Magic</li>
+                        <li>Armor</li>
+                    </ul>
+                </div>
+                <div class="inventory">inventory
+                    <ul>
+                        <li>Weapon</li>
+                        <li>Armor</li>
+                        <li>Spells</li>
+                        <li>Items</li>
+                    </ul>
+                </div>
+                <div id="character-img"></div>
+            </div>
+        </div> 
+    </main>
+</body>
+</html>
