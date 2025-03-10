@@ -63,7 +63,27 @@ Research and initial implementation of accordions, trouble understanding the con
 
 Breakthrough in understanding of the relationship within CSS, JS & HTML works to make the accordion function corrently.  Build out of the "locations" accordion as example.  Stretch goal set to implement images and build to other gallery images.
 
-Next development: carousel build for the news/articles page
+Next development: horizontal scroll bar for the news/articles page and a vertical scroll bar view of the "Weekly Updates"
+
+Built out two areas in the news HTML:
+* Horizontal Scroll bar to review different dummy articles that a user can scroll through
+* Vertical scroll box with the dummy "Weekly Updates" for this video game developer site
+
+Reviewed research to determine how to set up a horizontal scrolling menu to appear for an element.  After reviewing the code, created articles and images to fit as "cards" within the element.
+
+For the vertical scroll box, created a list of weekly updates that would allow for a user to look through the updated terms.
+
+Now that this was tackled, with remaining time in day, focus on creation of:
+
+* Modal on main page that will appear to require user inputs (user adventurer's name, game class, and confirmation).  These inputs will apply to the game's scripting.
+
+
+
+
+
+
+
+
 
 
 

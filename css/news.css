@@ -1,0 +1,93 @@
+/* News Page CSS design */
+
+.news-content {
+    display: grid;
+    width: 90%;
+    margin-top: 40px;
+    justify-self: center;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "h2 h3"
+    "articles-scroll feed"
+    ;
+    column-gap: 500px;
+}
+
+h2 {
+    grid-area: h2;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 3em;
+}
+
+h3 {
+    grid-area: h3;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 2em;
+    text-wrap: nowrap;
+    border-bottom: 2px black solid;
+}
+
+.articles-scroll {
+    display: flex;
+    overflow: auto;
+    max-width: 860px;
+    grid-area: articles-scroll;
+    background-color: cornflowerblue;
+    white-space: nowrap;
+    min-width: 400px;
+}
+
+#updates {
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    list-style: none;
+}
+
+span {
+    font-weight: 100;
+    font-size: .9em;
+}
+
+.news-feed {
+    border: purple 2px solid;
+    max-width: 325px;
+    min-width: 325px;
+    max-height: 300px;
+    overflow: auto
+}
+
+.feed {
+    grid-area: feed;
+    padding: 20px 15px;
+    text-wrap: wrap;
+    
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    min-width: 300px;
+    text-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 10px
+}
+
+img {
+    padding-bottom: 10px;
+    border-radius: 50%;
+}
+
+#article-title {
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 5px;
+    border-top: black 4px solid;
+}
