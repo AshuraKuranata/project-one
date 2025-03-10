@@ -4,15 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css"/>  <!--CHANGE SECTION HERE-->
-    <script defer src="./js/app.js"></script>       <!--CHANGE SECTION HERE-->
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/gallery.css"/>
+    <script defer src="./js/main.js"></script>
 </head>
 <body>
-    <main>
-        <article>Locations</article>
-        <article>Heroes</article>
-        <article>Enemies</article>
-        <article>Items</article>
+    <header class="header">
+        <label id="hamburger-icon" for="hamburger-btn">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+        <input id="hamburger-btn" type="checkbox" />
+        <nav>
+            <!--This will be the navigation that the user can select to navigate to new pages-->
+            <!--Make this into a hamburger at top left of page and expand from the left edge of screen into view when clicked-->
+            <ul class="main-nav">
+                <li id="nav"><a href="main.html">Main</a></li>
+                <li id="nav"><a href="game-about.html">About</a></li>
+                <li id="nav"><a href="game-news.html">News</a></li>
+                <li id="nav"><a href="game-gallery.html">Gallery</a></li>
+                <li id="nav"><a href="game-articles.html">Articles</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main> 
+        <h1>Game Image Gallery</h1>     <!--STRETCH: Make the Gallery Mobile Friendly-->
+        <button class="accordion">
+            <h2>Locations</h2>
+        </button>
+        <div class="panel">
+            <img class="location" src="https://i.imgur.com/ouQ6Qj5.jpeg">
+            <img class="location" src="https://static.wikia.nocookie.net/wccs-dungeons-and-dragons/images/4/49/Fantasy_mountain_rendering_by_jbconcept-d3g85g7.jpg/revision/latest?cb=20180705232426">
+            <img class="location" src="https://steemitimages.com/p/FxX5cZUEw6DD9wPwwS81Yuu3gYs9aR1WA63xektpKcLu9tYSqUaNBcQ29qbpiouwiYbckbDyX1eTZYqzbUk5qnNvLN12UTwZ1nQC87kt2Kjc?format=match&mode=fit&width=640">
+            <p class="location-text">Plains</p>
+            <p class="location-text">Mountains</p>
+            <p class="location-text">Desert</p>
+        </div>
+        
+        <button class="accordion">
+            <h2>Heroes</h2>
+        </button>
+        <div class="panel">
+            <p class="heroes">Warrior</p>
+            <p class="heroes">Ranger</p>
+            <p class="heroes">Mage</p>
+        </div>
+        <button class="accordion">
+            <h2>Enemies</h2>
+        </button>
+        <div class="panel">
+            <p class="enemies">Demon Lord</p>
+            <p class="enemies">Goblins</p>
+            <p class="enemies">Bat</p>
+            <p class="enemies">Lizard</p>
+            <p class="enemies">Spider</p>
+        </div>
+        <button class="accordion">
+            <h2>Items</h2>
+        </button>
+        <div class="panel">
+            <p class="items">Potion</p>
+            <p class="items">Wooden Sword</p>
+            <p class="items">Cloth Armor</p>
+        </div>
+        <button class="accordion">
+            <h2>Spells</h2>
+        </button>
+        <div class="panel">
+            <p class="spells">Fire Bolt</p>
+            <p class="spells">Ice Shard</p>
+            <p class="spells">Lightning Shock</p>
+            <p class="spells">Heal</p>
+            <p class="spells">Cure</p>
+        </div>
     </main>
 </body>
 </html>

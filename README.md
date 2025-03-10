@@ -56,7 +56,14 @@ With this complete, I believe I'm fairly forward in the expectations I had for w
 
 ## Day Two: 
 
+Build out hamburger buttons on other linked pages
+Research and initial implementation of accordions, trouble understanding the concept of how to toggle/select an accordion button to make the panel appear below.
 
+## Day Three:
+
+Breakthrough in understanding of the relationship within CSS, JS & HTML works to make the accordion function corrently.  Build out of the "locations" accordion as example.  Stretch goal set to implement images and build to other gallery images.
+
+Next development: carousel build for the news/articles page
 
 
 
