@@ -77,7 +77,17 @@ Now that this was tackled, with remaining time in day, focus on creation of:
 
 * Modal on main page that will appear to require user inputs (user adventurer's name, game class, and confirmation).  These inputs will apply to the game's scripting.
 
+## Day 4:
 
+Working on improving/adding more scripted events to Game News Page.  Decided to add in "Like" buttons for each article.
+
+Created the scripting event to target for listeners, but currently trying to determine how to target specific span based on ID vs. creating individual classes and building code that way.
+
+Going back to modal build while waiting.
+
+Successfully created script in JS for the "Start Now" button to make Modal launch for user to input information, then for the Modal to close/disappear when the user either selects outside of the modal box or the "x" at the top right of the modal box.
+
+Received some good advice from cohort on utilizing "parentElement" & "children" call functions based on code layering and events.  This helped me to solve the issue for the target for likes to add to the news article event.
 
 
 

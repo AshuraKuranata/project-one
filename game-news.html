@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/main.css"/>  
     <link rel="stylesheet" href="./css/news.css"/>
-    <script defer src="./js/app.js"></script>
+    <script defer src="./js/main.js"></script>
     <script defer src="./js/news.js"></script>
 </head>
 <body>
@@ -31,12 +31,50 @@
     <div class="news-content">
         <h2>Latest Articles</h2>    <!--STRETCH: Make the Weekly News Updates Grid snap below Latest Articles using @media-->
         <div class="articles-scroll">
-            <article><img src="./logo/Free Logo for BootCamp.png"><p id="article-title">Game Reviewers Say Cool Things About This Game!</p></article>
-            <article><img src="./logo/Free Logo for BootCamp.png"><p id="article-title">First Official Reviews Are In Next Week!</p></article>
-            <article><img src="./logo/Free Logo for BootCamp.png"><p id="article-title">Random Cool Developers Join the Team</p></article>
-            <article><img src="./logo/Free Logo for BootCamp.png"><p id="article-title">Blog Sites Raving About First Design</p></article>
-            <article><img src="./logo/Free Logo for BootCamp.png"><p id="article-title">Official Reveal of The Adventure Game!</p></article>
+            <article>
+                <img src="./logo/Free Logo for BootCamp.png">
+                <p id="article-title">Game Reviewers Say Cool Things About This Game!</p>
+                <div class="like-box">
+                    <button class="likeButton" id="art-one">&#9829</button>
+                    <span class="like-update" id="like-one"></span>
+                </div>
+            </article>
+            <article>
+                <img src="./logo/Free Logo for BootCamp.png">
+                <p id="article-title">First Official Reviews Are In Next Week!</p>
+                <div class="like-box">
+                <button class="likeButton" id="art-two">&#9829</button>
+                <span class="like-update" id="like-two"></span>
+                </div>
+            </article>
+            <article>
+                <img src="./logo/Free Logo for BootCamp.png">
+                <p id="article-title">Random Cool Developers Join the Team</p>
+                <div class="like-box">
+                    <button class="likeButton" id="art-three">&#9829</button>
+                    <span class="like-update" id="like-three"></span>
+                </div>
+            </article>
+            <article>
+                <img src="./logo/Free Logo for BootCamp.png">
+                <p id="article-title">Blog Sites Raving About First Design</p>
+                <div class="like-box">
+                    <button class="likeButton" id="art-four">&#9829</button>
+                    <span class="like-update" id="like-four"></span>
+                </div>
+            </article>
+            <article>
+                <img src="./logo/Free Logo for BootCamp.png">
+                <p id="article-title">Official Reveal of The Adventure Game!</p>
+                <div class="like-box">
+                    <button class="likeButton" id="art-five">&#9829</button>
+                    <span class="like-update" id="like-five"></span>
+                </div>
+            </article>
+            
         </div>
+        
+                
         <h3>Weekly Updates</h3>
         <div class="news-feed">
             <ul class="feed">

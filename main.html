@@ -11,14 +11,6 @@
     <script defer src="./js/enemylist.js"></script>
     <script defer src="./js/itemlist.js"></script>
 </head>
-    <!-- Modal prompt when you first log-in to give your character a name & selection of your character class -->
-    <!-- Hover-over on your character's stats area that provides tooltip information about them -->
-    <!-- Menu selections that appear as you click on things like shopping, battle, location, etc. -->
-    <!-- Navigation bar on the top of the screen to direct you through different sites (game articles, news, gallery, enemies, )  -->
-    <!-- Accordions built into game gallery -->
-    <!-- Rotation selection for Articles and News cards -->
-    <!-- Toggle selection to change the style format of game's menu -->
-    <!-- Modal prompt at victory/game-over to restart (either cycle back to the first modal or have the selection within this modal) -->
 <body>
     <header class="header">
         <h1>THE ADVENTURE GAME</h1>
@@ -40,7 +32,6 @@
         </nav>
     </header>
     <main>
-        <button id="start-game">Start Game</button>
         <div class="modal-box" id="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -49,15 +40,16 @@
                 <input class="character-name" id="gamestart" type="type" placeholder="Character Name..."></input>
                 <h3 id="gamestart">Please Select Your Class:</h3>
                 <div class="character-class" id="gamestart">
-                    <button class="warrior" id="class-select">Warrior</button>
-                    <button class="rogue" id="class-select">Rogue</button>
-                    <button class="mage" id="class-select">Mage</button>
+                    <button class="interact warrior" id="class-select">Warrior</button>
+                    <button class="interact rogue" id="class-select">Rogue</button>
+                    <button class="interact mage" id="class-select">Mage</button>
                 </div>
-                <button class="start-btn" id="gamestart">START NOW</button>
+                <button class="interact start-btn" id="gamestart">START NOW</button>
             </div>
         </div>
         <div class="game"> <!--This will be the main gamplay area of the page-->      
             <div class="game-display">
+                <button class="interact start-game">Start Game</button>
                 <div class="battle"> <!--Battle Screen display-->
                     <div class="enemy"></div>
                 </div>
