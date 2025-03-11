@@ -1,0 +1,27 @@
+.game {
+    display: grid;
+    grid-template-columns: 800px 300px;
+    grid-template-rows: 800px 1fr;
+    grid-template-areas: 
+    "gamedis chara"
+    "menu menu";
+    justify-self: center;
+    margin-top: 50px;
+
+}
+
+.character {
+    grid-area: chara;
+    border: 2px black solid
+}
+
+.game-display {
+    grid-area: gamedis;
+    width: 100%;
+    border: 2px black solid
+}
+
+.game-menu {
+    grid-area: menu;
+    border: 2px black solid
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/main.css"/>
-    <link rel="stylesheet" href="./css/game-menu.css"/>
+    <link rel="stylesheet" href="./css/game-display.css"/>
     <script defer src="./js/main.js"></script>
     <script defer src="./js/gamescript.js"></script>
     <script defer src="./js/enemylist.js"></script>
@@ -40,19 +40,34 @@
         </nav>
     </header>
     <main>
-        <div class="startmodal"> <!--Some form of eventListener that when the page is in focus, this must be completed and submitted-->
-            <h2>Welcome to THE ADVENTURE GAME</h2>
-            <input type="type">please enter your name</input> <!--Text Input Required-->
-            <p id="gamestart"> Please Select Your Class:</p>
-            <button class="interact warrior">Warrior</button> <!--Click = toggle/checkbox?-->
-            <button class="interact mage">Mage</button> <!--Click = toggle/checkbox?-->
-            <button class="interact" id="start">START NOW</button>
+        <button id="start-game">Start Game</button>
+        <div class="modal-box" id="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="gamestart">Welcome to THE ADVENTURE GAME</h2>
+                <h3 id="gamestart">Please input character name:</h3>
+                <input class="character-name" id="gamestart" type="type" placeholder="Character Name..."></input>
+                <h3 id="gamestart">Please Select Your Class:</h3>
+                <div class="character-class" id="gamestart">
+                    <button class="warrior" id="class-select">Warrior</button>
+                    <button class="rogue" id="class-select">Rogue</button>
+                    <button class="mage" id="class-select">Mage</button>
+                </div>
+                <button class="start-btn" id="gamestart">START NOW</button>
+            </div>
         </div>
-        <div class="endmodal">Game over Display</div>
         <div class="game"> <!--This will be the main gamplay area of the page-->      
             <div class="game-display">
                 <div class="battle"> <!--Battle Screen display-->
                     <div class="enemy"></div>
+                </div>
+            </div>
+            <div class="game-menu">
+                <div class="basic-selection">
+                    <button class="interact" id="fight">Encounter</button>
+                    <button class="interact" id="shop">Shop</button>
+                    <button class="interact" id="magicshop">Magic Shop</button>
+                    <button class="interact" id="rest">Rest</button>
                 </div>
                 <div class="merchant">
                     <button class="interact" id="buy">Buy</button>
@@ -63,14 +78,6 @@
                         <button class="interact zone-one armor" id="cloth-armor">Cloth Armor $50</button>
                         <button class="interact zone-one item" id="potion">Potion $5</button>
                     </div>
-                </div>
-            </div>
-            <div class="game-menu">
-                <div class="basic-selection">
-                    <button class="interact" id="fight">Encounter</button>
-                    <button class="interact" id="shop">Shop</button>
-                    <button class="interact" id="magicshop">Magic Shop</button>
-                    <button class="interact" id="rest">Rest</button>
                 </div>
             </div>
             <div class="character">

@@ -85,3 +85,93 @@ h1 {
     font-size: 2.5em;
     align-content: center;
 }
+
+/* Modal design */
+.modal-box {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-items: center;
+    align-content: center;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-content: center;
+    justify-items: center;
+    padding: 25px;
+    border-radius: 15%;
+}
+
+.close {
+    color: grey;
+    align-self:last baseline;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#gamestart {
+    margin-bottom: 10px;
+    flex-wrap: nowrap;
+}
+
+.character-name {
+    padding: 10px;
+    font-size: .9em;
+}
+
+.character-class{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#class-select {
+    padding: 10px;
+    font-size: 1em;
+    border: black 4px solid;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.warrior:hover {
+    background-color: red;
+}
+
+.rogue:hover {
+    background-color: green;    
+}
+
+.mage:hover {
+    background-color: blue;    
+}
+
+.start-btn {
+    padding: 10px;
+    font-size: 3rem;
+    border: 0px;
+}
+
+.start-btn:hover {
+    background-color: #ffff00;
+}
+.start-btn:active {
+    background-color: #dddd00;
+}
