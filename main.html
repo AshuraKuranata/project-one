@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="./css/main.css"/>
     <link rel="stylesheet" href="./css/game-display.css"/>
     <script defer src="./js/main.js"></script>
-    <script defer src="./js/gamescript.js"></script>
     <script defer src="./js/enemylist.js"></script>
     <script defer src="./js/itemlist.js"></script>
+    <script defer src="./js/characterclass.js"></script>
 </head>
 <body>
     <header class="header">
@@ -37,7 +37,7 @@
                 <span class="close">&times;</span>
                 <h2 id="gamestart">Welcome to THE ADVENTURE GAME</h2>
                 <h3 id="gamestart">Please input character name:</h3>
-                <input class="character-name" id="gamestart" type="type" placeholder="Character Name..."></input>
+                <input class="character-name" id="gamestart" placeholder="Character Name..."></input>
                 <h3 id="gamestart">Please Select Your Class:</h3>
                 <div class="character-class" id="gamestart">
                     <button class="interact warrior" id="class-select">Warrior</button>
@@ -75,29 +75,33 @@
             <div class="character">
                 <div class="characterinfo">
                     <div id="base-info">
-                        <p>Name</p>
-                        <p>Class</p>
-                        <p>Level</p>
-                        <p>XP</p>
+                        <p id="playerName">Name</p>
+                        <p id="playerClass">Class</p>
+                        <p id="characterLevel">Level</p>
+                        <p id="characterXP">XP</p>
                     </div>
                 </div>
                 <div class="characterstats">Stats
                     <ul>
-                        <li>HP</li>
-                        <li>MP</li>
-                    </ul>
-                    <ul>
-                        <li>Strength</li>
-                        <li>Magic</li>
-                        <li>Armor</li>
+                        <li id="characterHP">HP</li>
+                        <li id="characterMP">MP</li>
+                        <li id="characterStr">Strength</li>
+                        <li id="characterMag">Magic</li>
+                        <li id="characterArmor">Armor</li>
                     </ul>
                 </div>
                 <div class="inventory">inventory
+                    <div class="equipment">
+                        <p id="equipWeapon">Weapon</li>
+                        <p id="equipArmor">Armor</li>
+                    </div>
+                    <ul id="item-bag">
+                        <li class="items"></li>
+                    </ul>
+                </div>
+                <div class="spellbook">Spells
                     <ul>
-                        <li>Weapon</li>
-                        <li>Armor</li>
-                        <li>Spells</li>
-                        <li>Items</li>
+                        <li class="spells"></li>
                     </ul>
                 </div>
                 <div id="character-img"></div>

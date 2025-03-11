@@ -59,6 +59,8 @@ With this complete, I believe I'm fairly forward in the expectations I had for w
 Build out hamburger buttons on other linked pages
 Research and initial implementation of accordions, trouble understanding the concept of how to toggle/select an accordion button to make the panel appear below.
 
+---
+
 ## Day Three:
 
 Breakthrough in understanding of the relationship within CSS, JS & HTML works to make the accordion function corrently.  Build out of the "locations" accordion as example.  Stretch goal set to implement images and build to other gallery images.
@@ -77,11 +79,13 @@ Now that this was tackled, with remaining time in day, focus on creation of:
 
 * Modal on main page that will appear to require user inputs (user adventurer's name, game class, and confirmation).  These inputs will apply to the game's scripting.
 
+---
+
 ## Day 4:
 
 Working on improving/adding more scripted events to Game News Page.  Decided to add in "Like" buttons for each article.
 
-Created the scripting event to target for listeners, but currently trying to determine how to target specific span based on ID vs. creating individual classes and building code that way.
+Created the scripting event to target for listeners, but currently trying to determine how to target specific span with text listed vs. creating individual classes/ids for each.
 
 Going back to modal build while waiting.
 
@@ -89,8 +93,21 @@ Successfully created script in JS for the "Start Now" button to make Modal launc
 
 Received some good advice from cohort on utilizing "parentElement" & "children" call functions based on code layering and events.  This helped me to solve the issue for the target for likes to add to the news article event.
 
+Fully built out modal unit: functionality now includes selection of classes, player name, and when game is properly started utilizing modal, start game button is removed from the game.
 
+*There is an option to just have it hide from the display, I might consider that later especially if a "game over" modal appears.  However, I will reapproach that another time.* 
 
+### Total completed work:
+* Hamburger Nav for website navigation
+* Accordion of Gallery Images/sections
+* News articles multiple like button interactions for different articles that are complete
+* Start Button: modal screen that tracks user name input, selection of class, and removal of start modal button after selecting "Start Now"
+
+### Next Steps:
+* Updated game window display
+* Dialog box to track player actions
+* Character sheet fully built
+* Game Menu navigation - appearing and disappearing button elements as you select options.
 
 
 

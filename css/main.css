@@ -155,12 +155,22 @@ h1 {
     background-color: red;
 }
 
+.warrior-active {
+    background-color: red;
+}
+
 .rogue:hover {
     background-color: green;    
+}
+.rogue-active {
+    background-color: green;
 }
 
 .mage:hover {
     background-color: blue;    
+}
+.mage-active {
+    background-color: blue;
 }
 
 .start-btn {
