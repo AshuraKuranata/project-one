@@ -25,8 +25,6 @@ articleUpdate.forEach((art) => {
     }
 })
 
-
-
 likeButton.forEach((button) => {
     button.addEventListener("click", (event) => {
         if (event.target.id == "art-one") {

@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="./css/main.css"/>
     <link rel="stylesheet" href="./css/game-display.css"/>
     <script defer src="./js/main.js"></script>
-    <script defer src="./js/enemylist.js"></script>
-    <script defer src="./js/itemlist.js"></script>
-    <script defer src="./js/characterclass.js"></script>
 </head>
 <body>
     <header class="header">
@@ -50,9 +47,24 @@
         <div class="game"> <!--This will be the main gamplay area of the page-->      
             <div class="game-display">
                 <button class="interact start-game">Start Game</button>
+                <div class="town">
+                    <img id="main-town" src="./images/Fantasy Town.jpg">
+                </div>
                 <div class="battle"> <!--Battle Screen display-->
                     <div class="enemy"></div>
                 </div>
+            </div>
+            <div class="game-text">
+                <ul class="dialog">
+                    <li id="text">1</li>
+                    <li id="text">2</li>
+                    <li id="text">3</li>
+                    <li id="text">4</li>
+                    <li id="text">5</li>
+                    <li id="text">6</li>
+                    <li id="text">7</li>
+                    <li id="text">8</li>
+                </ul>
             </div>
             <div class="game-menu">
                 <div class="basic-selection">
@@ -73,38 +85,45 @@
                 </div>
             </div>
             <div class="character">
-                <div class="characterinfo">
-                    <div id="base-info">
-                        <p id="playerName">Name</p>
-                        <p id="playerClass">Class</p>
-                        <p id="characterLevel">Level</p>
-                        <p id="characterXP">XP</p>
-                    </div>
+                <div class="characterTitle">
+                    <p id="playerName">Name</p>
+                    <p id="playerClass">Class</p>
+                </div>
+                <div class="base-info">
+                    <p id="characterLevel"></p>
+                    <p id="characterXP"></p>
                 </div>
                 <div class="characterstats">Stats
-                    <ul>
-                        <li id="characterHP">HP</li>
-                        <li id="characterMP">MP</li>
-                        <li id="characterStr">Strength</li>
-                        <li id="characterMag">Magic</li>
-                        <li id="characterArmor">Armor</li>
-                    </ul>
+                        <p id="characterHP"></p>
+                        <p id="characterMP"></p>
+                        <p id="characterStr"></p>
+                        <p id="characterMag"></p>
+                        <p id="characterArmor"></p>
                 </div>
-                <div class="inventory">inventory
+                <div class="inventory">Inventory
                     <div class="equipment">
                         <p id="equipWeapon">Weapon</li>
                         <p id="equipArmor">Armor</li>
                     </div>
-                    <ul id="item-bag">
-                        <li class="items"></li>
-                    </ul>
+                    <div class="item-bag">
+                        <p class="items">Item Bag</p>
+                    </div>
                 </div>
-                <div class="spellbook">Spells
-                    <ul>
-                        <li class="spells"></li>
-                    </ul>
+                <div class="spellbook">
+                    <p class="spell-header">Spells</p>
+                    <div class="spells">
+                        <p id="firebolt">Fire Bolt</p>
+                        <p id="icesh">Ice Shard</p>
+                        <p id="lightnshk">Lightning Shock</p>
+                        <p id="heal">Heal</p>
+                        <p id="cure">Cure</p>
+                    </div>
                 </div>
-                <div id="character-img"></div>
+                <div class="character-img">
+                    <img id="warrior-img" src="./images/warrior.jpg">
+                    <img id="rogue-img" src="./images/rogue.jpg">
+                    <img id="mage-img" src="./images/mage.jpg">
+                </div>
             </div>
         </div> 
     </main>

@@ -32,7 +32,7 @@ The structure of how I plan to tackle the project work will be as follows:
 * Build second zone for game content
 * Update CSS links to content
 
-## Day One: Project Initialization
+## Day One (3/8):
 
 I started the day off with the intent and focus to primarily create the initial anticipated file structure in my repo for the project:
 * 5 HTML sites (main, 4 navigation pages)
@@ -54,16 +54,18 @@ With this complete, I believe I'm fairly forward in the expectations I had for w
 
 ---
 
-## Day Two: 
+## Day Two (3/9): 
 
 Build out hamburger buttons on other linked pages
 Research and initial implementation of accordions, trouble understanding the concept of how to toggle/select an accordion button to make the panel appear below.
 
 ---
 
-## Day Three:
+## Day Three (3/10):
 
-Breakthrough in understanding of the relationship within CSS, JS & HTML works to make the accordion function corrently.  Build out of the "locations" accordion as example.  Stretch goal set to implement images and build to other gallery images.
+Breakthrough in understanding of the relationship within CSS, JS & HTML works to make the accordion function correctly.  Build out of the "locations" accordion as example.
+
+*Stretch goal set to implement images and build to other gallery images.*
 
 Next development: horizontal scroll bar for the news/articles page and a vertical scroll bar view of the "Weekly Updates"
 
@@ -81,9 +83,9 @@ Now that this was tackled, with remaining time in day, focus on creation of:
 
 ---
 
-## Day 4:
+## Day Four (3/11):
 
-Working on improving/adding more scripted events to Game News Page.  Decided to add in "Like" buttons for each article.
+Working on improving/adding more scripted events to Game News Page.  Decided to add in "Like" buttons for each article that tracks # of likes received.
 
 Created the scripting event to target for listeners, but currently trying to determine how to target specific span with text listed vs. creating individual classes/ids for each.
 
@@ -109,7 +111,17 @@ Fully built out modal unit: functionality now includes selection of classes, pla
 * Character sheet fully built
 * Game Menu navigation - appearing and disappearing button elements as you select options.
 
+## Day 5 (3/12):
 
+Continued working on the game start functionality.  Build of the character stats based on name, class selection.
+
+Now generates a new character based on character selection and updates character object to reflect new changes.  Also added images to reflect the class you have selected.
+
+Added image designs to the start button, and the town when game starts.
+
+### Next Steps
+* Aim to build out more functions around the player interacting in town (shop, bar, fight) that will change the menu icons depending on what zone you're in.
+* Build fight sequence
 
 
 

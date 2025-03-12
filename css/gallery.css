@@ -8,10 +8,6 @@ main {
     align-content: center;
 }
 
-h2 {
-    font-size: 4rem;
-}
-
 p {
     font-size: 2rem;
     padding: 10px 0;
@@ -26,6 +22,8 @@ img {
 
 .accordion {
     display: flex;
+    font-size: 4rem;
+    font-weight: bold;
     background-color: blue;
     margin-top: 20px;
     cursor: pointer;
@@ -33,6 +31,7 @@ img {
     color: aquamarine;
     padding: 10px;
     justify-content: space-between;
+    align-items: center;
 }
 
 .active, .accordion:hover {
@@ -42,7 +41,6 @@ img {
 
 .accordion:after {
     content: '\02795';
-    font-size: 2em;
     color: grey;
     float: right;
     margin-left: 5px;
