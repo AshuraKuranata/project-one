@@ -184,32 +184,24 @@ ul {
     font-weight: 600;
 }
 
-.warrior:hover {
+.warrior:hover, .warrior-active {
     background-color: red;
 }
 
-.warrior-active {
-    background-color: red;
-}
-
-.rogue:hover {
+.rogue:hover, .rogue-active {
     background-color: green;    
 }
-.rogue-active {
-    background-color: green;
-}
 
-.mage:hover {
-    background-color: blue;    
-}
-.mage-active {
+.mage:hover, .mage-active  {
     background-color: blue;
+    color: silver;
 }
 
 .start-btn {
     padding: 10px;
     font-size: 3rem;
-    border: 0px;
+    border: 5px black dotted;
+    border-radius: 50px;
 }
 
 .start-btn:hover {
@@ -245,3 +237,4 @@ ul {
     font-size: 3em;
     align-self: center;
 }
+

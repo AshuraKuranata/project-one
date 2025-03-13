@@ -162,7 +162,7 @@ buttons.forEach((button) => {
             document.getElementById("characterStr").innerHTML = `Strength: ${game.characterInfo.stats.str}`
             document.getElementById("characterMag").innerHTML = `Magic: ${game.characterInfo.stats.mag}`
             document.getElementById("characterArmor").innerHTML = `Armor: ${game.characterInfo.stats.def}`
-            document.getElementById("characterGold").innerHTML = `Money: ${game.characterInfo.stats.gold}`
+            document.getElementById("characterGold").innerHTML = `Money: ${game.characterInfo.stats.gold}gp`
             startModal.style.display = "none";
             start.remove();
             townLoc.style.display = "flex";
@@ -202,7 +202,7 @@ buttons.forEach((button) => {
                     text.innerHTML = `A Wood Sword. Good choice.`
                     gameText(text);
                     game.characterInfo.stats.gold = game.characterInfo.stats.gold - shop.weapons[0].price
-                    document.getElementById("characterGold").innerHTML = `Gold: ${game.characterInfo.stats.gold}`
+                    document.getElementById("characterGold").innerHTML = `Money: ${game.characterInfo.stats.gold}gp`
                     game.characterInfo.equip.weapon = shop.weapons[0];
                     document.getElementById("equipWeapon").innerHTML = `${game.characterInfo.equip.weapon.name}`
                     document.getElementById("wood-sword").remove();
@@ -222,7 +222,7 @@ buttons.forEach((button) => {
                     text.innerHTML = `Cloth Armor. Keeps you from dying to those slimes.`
                     gameText(text);
                     game.characterInfo.stats.gold = game.characterInfo.stats.gold - shop.armor[0].price
-                    document.getElementById("characterGold").innerHTML = `Gold: ${game.characterInfo.stats.gold}`
+                    document.getElementById("characterGold").innerHTML = `Money: ${game.characterInfo.stats.gold}gp`
                     game.characterInfo.equip.armor = shop.armor[0];
                     document.getElementById("equipArmor").innerHTML = `${game.characterInfo.equip.armor.name}`
                     document.getElementById("cloth-armor").remove();
@@ -239,10 +239,10 @@ buttons.forEach((button) => {
                 if (game.characterInfo.stats.gold >= shop.item[0].price) {
                     const text = document.createElement('li');
                     text.id = "text"
-                    text.innerHTML = `Potions, will keep you alive in a fight`
+                    text.innerHTML = `Potions, will keep you alive in a fight.`
                     gameText(text);
                     game.characterInfo.stats.gold = game.characterInfo.stats.gold - shop.item[0].price;
-                    document.getElementById("characterGold").innerHTML = `Gold: ${game.characterInfo.stats.gold}`
+                    document.getElementById("characterGold").innerHTML = `Money: ${game.characterInfo.stats.gold}gp`
                     game.characterInfo.items[0].quantity += 1;
                     document.getElementById("items").innerHTML = `Potions: ${game.characterInfo.items[0].quantity}`
                 } else {
@@ -291,7 +291,9 @@ buttons.forEach((button) => {
             document.getElementById('slime').style.display = "flex";
             encounterMenu.style.display = "none";
             battleMenu.style.display = "flex";
-            encounterRan.enemyRan1 = enemyList[Math.floor(Math.random() * enemyList.length)]
+            encounterRan.enemyRan1 = structuredClone(enemyList[Math.floor(Math.random() * enemyList.length)])
+            console.log(encounterRan)
+            console.log(enemyList)
             const text = document.createElement('li');
             text.id = "text"
             text.innerHTML = `You have encountered a ${encounterRan.enemyRan1.name}.`
@@ -357,12 +359,13 @@ buttons.forEach((button) => {
                 game.characterInfo.title.xp += encounterRan.enemyRan1.xp;
                 document.getElementById("characterXP").innerHTML = `XP: ${game.characterInfo.title.xp}`
                 game.characterInfo.stats.gold += encounterRan.enemyRan1.gold;
-                document.getElementById("characterGold").innerHTML = `Money: ${game.characterInfo.stats.gold}`
+                document.getElementById("characterGold").innerHTML = `Money: ${game.characterInfo.stats.gold}gp`
                 const text = document.createElement('li');
                 text.id = "text"
                 text.innerHTML = `You win! You earned ${encounterRan.enemyRan1.gold}gp and ${encounterRan.enemyRan1.xp}xp.`
                 gameText(text);
-                encounterRan.enemyRan1 = null;
+                encounterRan.enemyRan1 = {};
+                console.log(encounterRan)
                 merchLoc.style.display = "none"
                 townLoc.style.display = "flex"
                 mainMenu.style.display = "flex"
@@ -373,6 +376,7 @@ buttons.forEach((button) => {
                 battleMenu.style.display = "none";
             }
         }
+        // Rest function
         if (event.target.id == "rest") {
             game.characterInfo.info.currentHP = game.characterInfo.info.maxHP;
             game.characterInfo.info.currentMP = game.characterInfo.info.maxMP;
@@ -387,7 +391,7 @@ buttons.forEach((button) => {
 });
 
 document.querySelector(".character").addEventListener("mouseover", (hover) => {
-    if (hover.target.classList.contains("characterstats") || hover.target.classList.contains("statswindow" )) {
+    if (hover.target.classList.contains("characterstats") || hover.target.classList.contains("statswindow")) {
         document.querySelector(".statswindow").style.display = "flex";        
     }
 })

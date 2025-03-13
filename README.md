@@ -141,6 +141,8 @@ Accomplishments:
 * Added responsive design element into news page (shifts the weekly updates box under the articles)
 * Added a mouseover event listener for the stats for character to appear
 * Fixed bug where nav was covered by the game-over picture
+* Encountered bug where object was not cloning to random encounter battle.  Found fix through research using structuredClone() command to deep copy the random encounter element.
+* Visual updates to the game
 
 Finalizing day by reviewing code and practicing for mock interview presentations.
 

@@ -2,7 +2,7 @@
 .game {
     display: grid;
     grid-template-columns: 800px 300px;
-    grid-template-rows: 600px 100px 100px;
+    grid-template-rows: 600px 200px 150px;
     grid-template-areas: 
     "gamedis chara"
     "gametxt chara"
@@ -10,6 +10,11 @@
     justify-self: center;
     padding-top: 50px;
 }
+
+p {
+    padding: 5px;
+    font-size: 18px;
+    }
 
 /* Game Display */
 .game-display {
@@ -77,8 +82,6 @@
     "stats inventory"
     "stats inventory"
     "spell spell";
-    border: 2px black solid;
-    gap: 10px
 }
 .character-img {
     grid-area: chaImg;
@@ -104,6 +107,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
+    padding-left: 5px;
 }
 .base-info {
     grid-area: level;
@@ -111,13 +115,15 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
+    padding-left: 5px;
 }
 
 .characterstats {
     grid-area: stats;
     display: flex;
+    text-align: center;
     flex-direction: column;
-    align-items: center;
+    padding: 10px
 }
 .characterstats:hover {
     cursor: pointer;
@@ -128,9 +134,9 @@
     flex-direction: column;
     position: absolute;
     width: fit-content;
-    background-color: white;
-    border: 2px black solid;
-    
+    background-color: grey;
+    align-self: center;
+    /* border: 2px black solid; */
 }
 
 .inventory {
@@ -138,9 +144,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-evenly;
-
+    padding: 10px 0px 0px 5px
 }
+
 .spellbook {
     grid-area: spell;
     display: grid;
@@ -149,6 +155,7 @@
     "spells spells";
     width: 100%;
 }
+
 .spell-header {
     grid-area: spellheader;
     align-content: center;
@@ -166,7 +173,6 @@
 
 .game-menu {
     grid-area: menu;
-    border: 2px black solid;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -236,8 +242,13 @@
 .game-text {
     grid-area: gametxt;
     border: 2px black solid;
-    overflow: auto;
-    white-space: nowrap;
+    width: 100%;
+    text-wrap: wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* white-space: nowrap; */
+    font-size: 1.5rem;
+    background-color: lightgrey;
 }
 
 

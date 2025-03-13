@@ -8,9 +8,9 @@ for (i = 0; i < accordion.length; i++) {
         event.target.classList.toggle('active');
     let panel = event.target.nextElementSibling;
     if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
+        panel.style.maxHeight = "";
     } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
+        panel.style.maxHeight = '100%';
     }
     });
 };
