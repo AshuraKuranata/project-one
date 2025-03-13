@@ -113,23 +113,35 @@ Fully built out modal unit: functionality now includes selection of classes, pla
 
 ## Day 5 (3/12):
 
-Continued working on the game start functionality.  Build of the character stats based on name, class selection.
+Continued working on game functionality through selections.
 
-Now generates a new character based on character selection and updates character object to reflect new changes.  Also added images to reflect the class you have selected.
-
-Added image designs to the start button, and the town when game starts.
+### Completed tasks of the day
+* Now generates a new character based on character selection and updates character object to reflect new changes.  Also added images to reflect the class you have selected.
+* Added image designs to the start button, the town, and merchant shop navigation.
+* Completed build of player interaction with initial town square and the shop.  Purchasing logic and updates to stats has been added
 
 ### Next Steps
-* Aim to build out more functions around the player interacting in town (shop, bar, fight) that will change the menu icons depending on what zone you're in.
-* Build fight sequence
+* Build encounter sequence
+* Aim to build out more functions around the player interacting in town that will change the menu icons depending on what zone you're in.
 
 
+## Day 6 (3/13):
 
+Final day of preparation.  Aim to focus on:
 
+* Building an encounter sequence that if won adds experience, gold, and can level character.
+* Review code to ensure I understand what is happening
 
+Accomplishments:
 
+* Added logic for random encounters (2 types of slimes to fight).
+* Battle and retreat fully available
+* Added text dialog for all options
+* If player HP reaches 0, game over screen
+* Added responsive design element into news page (shifts the weekly updates box under the articles)
+* Added a mouseover event listener for the stats for character to appear
+* Fixed bug where nav was covered by the game-over picture
 
-
-
+Finalizing day by reviewing code and practicing for mock interview presentations.
 
 [^1]: When I was looking into the code, I think this might be one of those cases that using AJAX might be helpful.  I will explore that later if I have time to review.

@@ -12,7 +12,7 @@
     "articles-scroll feed"
     "likeButton feed"
     ;
-    column-gap: 500px;
+    column-gap: 200px;
 }
 
 h2 {
@@ -30,8 +30,7 @@ h3 {
     align-items: center;
     padding: 10px;
     font-size: 2em;
-    text-wrap: nowrap;
-    border-bottom: 2px black solid;
+
 }
 
 .articles-scroll {
@@ -40,7 +39,8 @@ h3 {
     grid-area: articles-scroll;
     background-color: cornflowerblue;
     white-space: nowrap;
-    min-width: 900px;
+    min-width: 600px;
+    max-width: 900px;
 }
 
 #updates {
@@ -68,7 +68,6 @@ span {
     padding: 20px 15px;
     text-wrap: wrap;
     background-color: white;
-    
 }
 
 article {
@@ -124,4 +123,20 @@ img {
     font-size: 1.5em;
     text-wrap: none;
     font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+    .news-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "h2 "
+    "articles-scroll"
+    "h3"
+    "feed"
+    ;
+    }
+    .articles-scroll {
+        max-width: 600px;
+    }
 }

@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="header">
-        <h1>THE ADVENTURE GAME</h1>
+        <h1>SLAY THE DEMON LORD</h1>
         <label id="hamburger-icon" for="hamburger-btn">
             <div class="line"></div>
             <div class="line"></div>
@@ -32,7 +32,7 @@
         <div class="modal-box" id="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h2 id="gamestart">Welcome to THE ADVENTURE GAME</h2>
+                <h2 id="gamestart">Welcome to SLAY THE DEMON LORD</h2>
                 <h3 id="gamestart">Please input character name:</h3>
                 <input class="character-name" id="gamestart" placeholder="Character Name..."></input>
                 <h3 id="gamestart">Please Select Your Class:</h3>
@@ -44,44 +44,52 @@
                 <button class="interact start-btn" id="gamestart">START NOW</button>
             </div>
         </div>
+        <div class="game-over">You have been killed and the Demon Lord reigns forever.  Game Over.</div>
         <div class="game"> <!--This will be the main gamplay area of the page-->      
             <div class="game-display">
                 <button class="interact start-game">Start Game</button>
                 <div class="town">
                     <img id="main-town" src="./images/Fantasy Town.jpg">
                 </div>
+                <div class="merchShop">
+                    <img id="merch-shop" src="./images/Market Square.jpg">
+                </div>
                 <div class="battle"> <!--Battle Screen display-->
-                    <div class="enemy"></div>
+                    <img id="battle-zone" src="https://i.pinimg.com/originals/43/e9/7e/43e97ea8100bd47c7a2fec610f8e8ca9.jpg"> </img>
+                    <img id="slime" src="./images/Slime Enemy.jpg"/>
+                        <!-- <img id="bat" src="./images/Bat Enemy.jpg"/> -->
                 </div>
             </div>
             <div class="game-text">
                 <ul class="dialog">
-                    <li id="text">1</li>
-                    <li id="text">2</li>
-                    <li id="text">3</li>
-                    <li id="text">4</li>
-                    <li id="text">5</li>
-                    <li id="text">6</li>
-                    <li id="text">7</li>
-                    <li id="text">8</li>
                 </ul>
             </div>
             <div class="game-menu">
-                <div class="basic-selection">
-                    <button class="interact" id="fight">Encounter</button>
-                    <button class="interact" id="shop">Shop</button>
-                    <button class="interact" id="magicshop">Magic Shop</button>
-                    <button class="interact" id="rest">Rest</button>
+                <div class="basic-menu">
+                    <button class="interact main-menu" id="encounter">Encounter</button>
+                    <button class="interact main-menu" id="shop">Shop</button>
+                    <button class="interact main-menu" id="rest">Rest</button>
+                    <!-- <button class="interact main-menu" id="magicshop">Magic Shop</button> -->
                 </div>
                 <div class="merchant">
-                    <button class="interact" id="buy">Buy</button>
-                    <button class="interact" id="sell">Sell</button>
-                    <button class="interact" id="return">Leave</button>
-                    <div id="stock">
-                        <button class="interact zone-one weapon" id="wood-sword">Wooden Sword $50</button>
-                        <button class="interact zone-one armor" id="cloth-armor">Cloth Armor $50</button>
-                        <button class="interact zone-one item" id="potion">Potion $5</button>
-                    </div>
+                    <button class="interact merchant-menu" id="buy">Buy</button>
+                    <!-- <button class="interact merchant-menu" id="return">Leave</button> -->
+                    <button class="interact merchant-menu return">Leave</button>
+                </div>
+                <div id="stock">
+                    <button class="interact merchant-menu zone-one purchase" id="wood-sword">Wooden Sword 40gp</button>
+                    <button class="interact merchant-menu zone-one purchase" id="cloth-armor">Cloth Armor 30gp</button>
+                    <button class="interact merchant-menu zone-one purchase" id="potion">Potion 10gp</button>
+                    <button class="interact merchant-menu zone-one" id="return-merch-menu">Back</button>
+                </div>
+                <div class="encounter">
+                    <button class="interact encounter-menu zone-one random">Random Encounter</button>
+                    <button class="interact encounter-menu return">Leave</button>
+                </div>
+                <div class="battle-menu">
+                    <button class="interact fight" id="attack">Attack</button>
+                    <button class="interact fight use-item">Potion</button>
+                    <button class="interact fight return">Flee</button>
                 </div>
             </div>
             <div class="character">
@@ -94,29 +102,32 @@
                     <p id="characterXP"></p>
                 </div>
                 <div class="characterstats">Stats
+                    <div class="statswindow">
                         <p id="characterHP"></p>
                         <p id="characterMP"></p>
                         <p id="characterStr"></p>
                         <p id="characterMag"></p>
                         <p id="characterArmor"></p>
-                </div>
-                <div class="inventory">Inventory
-                    <div class="equipment">
-                        <p id="equipWeapon">Weapon</li>
-                        <p id="equipArmor">Armor</li>
+                        <p id="characterGold"></p>
                     </div>
-                    <div class="item-bag">
-                        <p class="items">Item Bag</p>
+                </div>
+                <div class="inventory">
+                    <div class="equipment">Equipment
+                        <p id="equipWeapon"></li>
+                        <p id="equipArmor"></li>
+                    </div>
+                    <div class="item-bag">Item Bag
+                        <p id="items"></p>
                     </div>
                 </div>
                 <div class="spellbook">
                     <p class="spell-header">Spells</p>
                     <div class="spells">
-                        <p id="firebolt">Fire Bolt</p>
-                        <p id="icesh">Ice Shard</p>
-                        <p id="lightnshk">Lightning Shock</p>
-                        <p id="heal">Heal</p>
-                        <p id="cure">Cure</p>
+                        <p id="firebolt"></p>
+                        <p id="icesh"></p>
+                        <p id="lightnshk"></p>
+                        <p id="heal"></p>
+                        <p id="cure"></p>
                     </div>
                 </div>
                 <div class="character-img">
@@ -125,7 +136,7 @@
                     <img id="mage-img" src="./images/mage.jpg">
                 </div>
             </div>
-        </div> 
+        </div>
     </main>
 </body>
 </html>

@@ -8,7 +8,7 @@
     "gametxt chara"
     "menu menu";
     justify-self: center;
-    margin-top: 50px;
+    padding-top: 50px;
 }
 
 /* Game Display */
@@ -28,10 +28,43 @@
     align-self: center;
 }
 
-.battle {
+.merchShop {
     display: none;
+    align-content: stretch;
+    justify-content: stretch;
 }
 
+#merch-shop {
+    height: 100%;
+    width: 100%;
+    align-self: center;
+}
+
+.battle {
+    display: none;
+    align-content: center;
+    justify-content: center;
+}
+
+#battle-zone {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+}
+
+#slime {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    height: 25%;
+    align-self: center;
+}
+
+/* #bat {
+    align-self: center;
+    justify-self: center;
+    width: 25%;
+} */
 /* Character Window */
 .character {
     grid-area: chara;
@@ -79,13 +112,27 @@
     align-items: flex-start;
     justify-content: space-evenly;
 }
+
 .characterstats {
     grid-area: stats;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    align-items: center;
 }
+.characterstats:hover {
+    cursor: pointer;
+}
+
+.statswindow {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: fit-content;
+    background-color: white;
+    border: 2px black solid;
+    
+}
+
 .inventory {
     grid-area: inventory;
     display: flex;
@@ -116,11 +163,75 @@
 }
 
 /* Game Action Menu */
+
 .game-menu {
     grid-area: menu;
-    border: 2px black solid
+    border: 2px black solid;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
+.basic-menu {
+    display: none;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.main-menu {
+    padding: 10px 40px;
+    border-radius: 5px;
+    background-color: gold;
+    /* justify-content: space-evenly; */
+    font-size: 2em;
+}
+
+.merchant {
+    display: none;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.merchant-menu {
+    padding: 10px 40px;
+    border-radius: 5px;
+    background-color: gold;
+    font-size: 2em;
+}
+
+.encounter {
+    display: none;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.encounter-menu {
+    padding: 10px 40px;
+    border-radius: 5px;
+    background-color: gold;
+    justify-content: space-evenly;
+    font-size: 2em;
+}
+
+#stock {
+    display: none;
+    justify-self: space-between;
+}
+
+.battle-menu {
+    display: none;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.fight {
+    padding: 10px 40px;
+    border-radius: 5px;
+    background-color: gold;
+    justify-content: space-evenly;
+    font-size: 2em;
+}
 /* Game Text Box */
 .game-text {
     grid-area: gametxt;
@@ -128,3 +239,5 @@
     overflow: auto;
     white-space: nowrap;
 }
+
+
