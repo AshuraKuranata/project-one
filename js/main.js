@@ -309,7 +309,7 @@ buttons.forEach((button) => {
                 if (game.characterInfo.info.currentHP > game.characterInfo.info.maxHP) {
                     const text = document.createElement('li');
                     text.id = "text"
-                    text.innerHTML = `You heal ${game.characterInfo.info.maxHP - game.characterInfo.info.currentHP} HP.`
+                    text.innerHTML = `You heal ${(game.characterInfo.info.maxHP - game.characterInfo.info.currentHP) + 10} HP.`
                     gameText(text);
                     game.characterInfo.info.currentHP = game.characterInfo.info.maxHP
                     game.characterInfo.info.currentHP = game.characterInfo.info.currentHP - (encounterRan.enemyRan1.atk - game.characterInfo.stats.def)
@@ -321,11 +321,21 @@ buttons.forEach((button) => {
                     if (game.characterInfo.info.currentHP <= 0) {
                         gameOver();
                     }
-                }
+                } else {
                 const text = document.createElement('li');
                 text.id = "text"
-                text.innerHTML = `You heal ${game.characterInfo.info.maxHP - game.characterInfo.info.currentHP} HP.`
+                text.innerHTML = `You heal for 10 HP.`
                 gameText(text);
+                game.characterInfo.info.currentHP = game.characterInfo.info.currentHP - (encounterRan.enemyRan1.atk - game.characterInfo.stats.def)
+                    const text2 = document.createElement('li');
+                    text2.id = "text"
+                    text2.innerHTML = `You are hit for ${encounterRan.enemyRan1.atk - game.characterInfo.stats.def}.`
+                    gameText(text2);
+                    document.getElementById("characterHP").innerHTML = `HP ${game.characterInfo.info.currentHP}/${game.characterInfo.info.maxHP}`
+                    if (game.characterInfo.info.currentHP <= 0) {
+                        gameOver();
+                    }
+                }
             } else if (game.characterInfo.items[0].quantity <= 0) {
                 const text = document.createElement('li');
                 text.id = "text"
