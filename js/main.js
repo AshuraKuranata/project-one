@@ -64,14 +64,10 @@ const shop = {
     ]
 }
 
-
-
 // Button operation for the whole program
-
-// Modal Operation
 buttons.forEach((button) => {
     button.addEventListener("click", (event) => {
-        if (event.target.classList.contains('start-game')){
+        if (event.target.classList.contains('start-game')){  // Modal Operation
             console.log(startModal)
             startModal.style.display = "block";
         } else if (event.target.classList.contains("close")){
@@ -174,7 +170,6 @@ buttons.forEach((button) => {
         }
 
     // Game Action Buttons 
-        
         // Shop Interaction
         if (event.target.id == "shop") {
             townLoc.style.display = "none";
@@ -261,8 +256,8 @@ buttons.forEach((button) => {
             merchMenu.style.display = "flex";
             document.getElementById("stock").style.display = "none";
         }
-
-        if (event.target.classList.contains('return')) { // Any menu that returns to Main Menu 
+        // Any menu that returns to Main Menu
+        if (event.target.classList.contains('return')) {  
             merchLoc.style.display = "none"
             townLoc.style.display = "flex"
             mainMenu.style.display = "flex"
@@ -400,6 +395,14 @@ buttons.forEach((button) => {
     }) 
 });
 
+startModal.addEventListener("click", (event) => {
+    if (event.target == startModal) {
+        startModal.style.display = "none";
+    } else if (event.target.classList.contains("close")){
+        startModal.style.display = "none";
+    }
+})
+
 document.querySelector(".character").addEventListener("mouseover", (hover) => {
     if (hover.target.classList.contains("characterstats") || hover.target.classList.contains("statswindow")) {
         document.querySelector(".statswindow").style.display = "flex";        
@@ -412,11 +415,5 @@ document.querySelector(".character").addEventListener("mouseout", (hover) => {
     }
 })
 
-startModal.addEventListener("click", (event) => {
-    if (event.target == startModal) {
-        startModal.style.display = "none";
-    } else if (event.target.classList.contains("close")){
-        startModal.style.display = "none";
-    }
-})
+
 

@@ -39,6 +39,7 @@ nav {
 
     overflow: hidden;
     padding-top: 64px;
+    padding-left: 30px;
     transition: left .5s;
     background-color: lightseagreen;
 }
@@ -236,5 +237,7 @@ ul {
     text-align: center;
     font-size: 3em;
     align-self: center;
+    justify-self: center;
+    padding: 20px;
 }
 
