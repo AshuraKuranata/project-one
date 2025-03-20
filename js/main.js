@@ -24,6 +24,7 @@ const charaClass = [
 ]
 
 function gameOver() {
+
     gameOverDisplay.style.display = "flex";
 }
 
@@ -67,7 +68,8 @@ const shop = {
 // Button operation for the whole program
 buttons.forEach((button) => {
     button.addEventListener("click", (event) => {
-        if (event.target.classList.contains('start-game')){  // Modal Operation
+        // Modal Operation
+        if (event.target.classList.contains('start-game')){
             console.log(startModal)
             startModal.style.display = "block";
         } else if (event.target.classList.contains("close")){
@@ -178,7 +180,7 @@ buttons.forEach((button) => {
             merchLoc.style.display = "flex"
             const text = document.createElement('li');
             text.id = "text"
-            text.innerHTML = `You have entered the shop. The shopkeeper greets you.`
+            text.innerHTML = `You have entered the market square. You hear the sounds of many hawkers selling their wares.`
             gameText(text);
         }
         if (event.target.id == "buy") {
@@ -287,8 +289,6 @@ buttons.forEach((button) => {
             encounterMenu.style.display = "none";
             battleMenu.style.display = "flex";
             encounterRan.enemyRan1 = structuredClone(enemyList[Math.floor(Math.random() * enemyList.length)])
-            console.log(encounterRan)
-            console.log(enemyList)
             const text = document.createElement('li');
             text.id = "text"
             text.innerHTML = `You have encountered a ${encounterRan.enemyRan1.name}.`

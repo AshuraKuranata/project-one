@@ -42,6 +42,7 @@ nav {
     padding-left: 30px;
     transition: left .5s;
     background-color: lightseagreen;
+    z-index: 3;
 }
 
 nav a {
@@ -50,6 +51,7 @@ nav a {
     font-size: 2rem;
     color: black;
     font-weight: 400;
+    z-index: 3;
 }
 
 #hamburger-icon {
@@ -58,6 +60,7 @@ nav a {
     left: 10px;
     position: absolute;
     cursor: pointer;
+    z-index: 5
 }
 
 .line {
@@ -223,7 +226,8 @@ ul {
     font-size: 3rem;
     text-align: center;
     align-items: center;
-    z-index: 0;
+    justify-content: center;
+    z-index: 2;
 }
 
 .about {
